@@ -9,18 +9,21 @@
 		</layout>
 	</appender>
 
-	<appender name="fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+	<appender name="fileAppender" class="org.apache.log4j.rolling.RollingFileAppender">
 		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
 			<param name="FileNamePattern" value="logs/server.%d{yyyy-MM-dd}.log" />
+			<param name="ActiveFileName" value="logs/server.log"/>
 		</rollingPolicy>
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
 		</layout>
 	</appender>
 
-	<appender name="fileErrorAppender" class="org.apache.log4j.DailyRollingFileAppender">
+	<appender name="fileErrorAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+		<param name="threshold" value="error" />
 		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
 			<param name="FileNamePattern" value="logs/errors/serverError.%d{yyyy-MM-dd}.log" />
+		    <param name="ActiveFileName" value="logs/errors/serverError.log"/>
 		</rollingPolicy>
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
