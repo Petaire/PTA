@@ -19,8 +19,7 @@ import org.apache.commons.logging.impl.Log4JLogger;
 public class PTAServer {
 
 	private static final Log4JLogger LOGGER = new Log4JLogger(PTAServer.class
-			.getName());
-
+			.getPackage().getName());
 	private static final int DEFAULT_PORT = 54504;
 
 	/**
