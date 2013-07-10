@@ -18,7 +18,8 @@ import org.apache.commons.logging.impl.Log4JLogger;
  */
 public class PTAThread implements Runnable {
 
-	private static final Log4JLogger LOGGER = new Log4JLogger("PTAThread");
+	private static final Log4JLogger LOGGER = new Log4JLogger(PTAThread.class
+			.getName());
 
 	private Socket socket;
 
@@ -32,8 +33,7 @@ public class PTAThread implements Runnable {
 	 */
 	@Override
 	public void run() {
-		LOGGER.debug("Démarrage du thread");
-		System.out.println("Démarrage du thread");
+		PTAThread.LOGGER.debug("Démarrage du thread");
 		try {
 			final BufferedReader reader = new BufferedReader(
 					new InputStreamReader(socket.getInputStream()));
@@ -41,14 +41,13 @@ public class PTAThread implements Runnable {
 			while (true) {
 				System.out.println(reader.readLine());
 			}
-		} catch (IOException e) {
-			LOGGER.warn("Déconnection du socket");
-			System.out.println("Déconnection du socket");
+		} catch (final IOException e) {
+			PTAThread.LOGGER.warn("Déconnection du socket");
 			try {
 				socket.close();
-			} catch (IOException e1) {
-				LOGGER.error("Erreur lors de la fermeture du socket ", e1);
-				System.err.println("Erreur lors de la fermeture du socket");
+			} catch (final IOException e1) {
+				PTAThread.LOGGER.error(
+						"Erreur lors de la fermeture du socket ", e1);
 			}
 		}
 

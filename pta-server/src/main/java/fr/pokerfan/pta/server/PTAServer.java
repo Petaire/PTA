@@ -18,7 +18,8 @@ import org.apache.commons.logging.impl.Log4JLogger;
  */
 public class PTAServer {
 
-	private static final Log4JLogger LOGGER = new Log4JLogger("PTAServer");
+	private static final Log4JLogger LOGGER = new Log4JLogger(PTAServer.class
+			.getName());
 
 	private static final int DEFAULT_PORT = 54504;
 
@@ -32,49 +33,57 @@ public class PTAServer {
 	 */
 	public static void main(final String[] args) {
 
-		final ServerSocket serverSocket = initSocket(args);
+		final ServerSocket serverSocket = PTAServer.initSocket(args);
 		if (serverSocket == null) {
-			LOGGER.fatal("serverSocket non créé. Exit");
-			System.err.println("serverSocket non créé. Exit");
+			PTAServer.LOGGER.fatal("serverSocket non créé. Exit");
 			return;
 		}
 
 		while (true) {
 			try {
+				// on attend les connections et on les sépares dans des threads
+				// différents
 				final Socket socketConnection = serverSocket.accept();
 				final PTAThread ptaThread = new PTAThread(socketConnection);
-				Thread thread = new Thread(ptaThread);
+				final Thread thread = new Thread(ptaThread);
 				thread.start();
-			} catch (IOException e) {
-				LOGGER.warn("déconnection du client");
-				System.err.println("déconnection du client");
+			} catch (final IOException e) {
+				PTAServer.LOGGER.warn("déconnection du client");
 			}
 		}
 
 	}
 
 	/**
+	 * Initialisation du web socket avec les arguments donnés lors du lancement
+	 * de l'appli.<br>
+	 * Si pas d'arguments, utilisation des valeurs par defaut.
 	 * 
 	 * @param args
-	 * @return
+	 *            arguments
+	 * 
+	 * @return {@link ServerSocket} initialisé <br>
+	 *         <code>null</code> si une erreur survient lors de la création
 	 * 
 	 * @author pierre.kerichard
 	 */
 	private static ServerSocket initSocket(final String[] args) {
-		int port = DEFAULT_PORT;
+		PTAServer.LOGGER.debug("Initialisation du ServerSocket");
+		int port = PTAServer.DEFAULT_PORT;
 		try {
-
 			if (args != null && args.length > 0) {
 				port = Integer.valueOf(args[0]);
+				PTAServer.LOGGER.debug("Utilisation du port : " + port);
+			} else {
+				PTAServer.LOGGER.debug("Utilisation du port par defaut : "
+						+ port);
 			}
 
 			return new ServerSocket(port);
-		} catch (IOException e) {
-			LOGGER.error("Erreur lors de la création du socket sur le port "
-					+ String.valueOf(port), e);
-			System.err
-					.println("Erreur lors de la création du socket sur le port "
-							+ String.valueOf(port));
+		} catch (final IOException e) {
+			PTAServer.LOGGER.error(
+					"Erreur lors de la création du socket sur le port "
+							+ String.valueOf(port), e);
 			return null;
 		}
 	}
