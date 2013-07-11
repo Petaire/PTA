@@ -19,7 +19,7 @@ import org.apache.commons.logging.impl.Log4JLogger;
 public class PTAServer {
 
 	private static final Log4JLogger LOGGER = new Log4JLogger(PTAServer.class
-			.getPackage().getName());
+			.getCanonicalName());
 	private static final int DEFAULT_PORT = 54504;
 
 	/**
@@ -31,7 +31,6 @@ public class PTAServer {
 	 * @author pierre.kerichard
 	 */
 	public static void main(final String[] args) {
-
 		final ServerSocket serverSocket = PTAServer.initSocket(args);
 		if (serverSocket == null) {
 			PTAServer.LOGGER.fatal("serverSocket non créé. Exit");

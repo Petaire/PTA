@@ -19,7 +19,7 @@ import org.apache.commons.logging.impl.Log4JLogger;
 public class PTAThread implements Runnable {
 
 	private static final Log4JLogger LOGGER = new Log4JLogger(PTAThread.class
-			.getName());
+			.getCanonicalName());
 
 	private Socket socket;
 
