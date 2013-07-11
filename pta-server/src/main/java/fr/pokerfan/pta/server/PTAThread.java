@@ -3,11 +3,10 @@
  */
 package fr.pokerfan.pta.server;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.Socket;
 
+import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
@@ -24,11 +23,17 @@ import com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl;
  */
 public class PTAThread implements Runnable {
 
-	private static final Log4JLogger LOGGER = new Log4JLogger(
-			PTAThread.class.getCanonicalName());
+	private static final Log4JLogger LOGGER = new Log4JLogger(PTAThread.class
+			.getCanonicalName());
 
 	private Socket socket;
 
+	/**
+	 * Constructeur
+	 * 
+	 * @param socket
+	 *            socket
+	 */
 	public PTAThread(final Socket socket) {
 		this.socket = socket;
 	}
@@ -41,72 +46,64 @@ public class PTAThread implements Runnable {
 	public void run() {
 		PTAThread.LOGGER.debug("Démarrage du thread");
 		try {
-			final BufferedReader reader = new BufferedReader(
-					new InputStreamReader(socket.getInputStream()));
-			StringBuffer buffer = new StringBuffer();
-			PropertyManager props = new PropertyManager(
+			final PropertyManager props = new PropertyManager(
 					PropertyManager.CONTEXT_READER);
 			XMLStreamReader xmlReader;
+			// Attente de l'envoi des données par le client
 			while (true) {
 				if (socket.getInputStream().available() > 1) {
+					// Création du reader
 					xmlReader = new XMLStreamReaderImpl(
 							socket.getInputStream(), props);
 					break;
 				}
 
 			}
+
+			// NPE safe
 			if (xmlReader != null) {
+				// Parcours des élements
 				while (xmlReader.hasNext()) {
 					switch (xmlReader.getEventType()) {
-					case XMLStreamReader.START_DOCUMENT:
-						LOGGER.info("Start of document : "
-								+ xmlReader.getVersion());
+					case XMLStreamConstants.START_DOCUMENT:
+						PTAThread.LOGGER.info("Start of document");
 						break;
-					case XMLStreamReader.START_ELEMENT:
-						LOGGER.info("Start element : " + xmlReader.getName());
+					case XMLStreamConstants.START_ELEMENT:
+						PTAThread.LOGGER.info("Start element : "
+								+ xmlReader.getName());
 						break;
-					case XMLStreamReader.END_ELEMENT:
-						LOGGER.info("End element : " + xmlReader.getName());
+					case XMLStreamConstants.END_ELEMENT:
+						PTAThread.LOGGER.info("End element : "
+								+ xmlReader.getName());
 						break;
-					case XMLStreamReader.CHARACTERS:
-						LOGGER.info("Characters : " + xmlReader.getText());
+					case XMLStreamConstants.CHARACTERS:
+						PTAThread.LOGGER.info("Characters : "
+								+ xmlReader.getText());
 						break;
 					default:
-						LOGGER.info("Default : " + xmlReader.getEventType());
+						PTAThread.LOGGER.info("Default : "
+								+ xmlReader.getEventType());
 						break;
 					}
 					xmlReader.next();
 				}
 
-				LOGGER.info("End of document");
+				PTAThread.LOGGER.info("End of document");
 				xmlReader.close();
-				LOGGER.info("Fermeture de l'input stream");
+				PTAThread.LOGGER.info("Fermeture de l'input stream");
 				socket.getInputStream().close();
 
 			}
 
-			// while (true) {
-			// final String line = reader.readLine();
-			// if (PTAConstantes.END_OF_FILE.equals(line)) {
-			// // le fichier est parsé
-			// LOGGER.info("Fin de la récupération. Réinitialisation du buffer.");
-			// System.out.println(buffer.toString());
-			//
-			// buffer = new StringBuffer();
-			// } else {
-			// buffer.append(line);
-			// }
-			// }
-
 		} catch (final IOException e) {
 			PTAThread.LOGGER.warn("Déconnection du client");
 
-		} catch (XMLStreamException e) {
+		} catch (final XMLStreamException e) {
 			PTAThread.LOGGER.error("Erreur lors de la création du Xml reader ",
 					e);
 		} finally {
 			try {
-				LOGGER.debug("Déconnection du socket");
+				PTAThread.LOGGER.debug("Déconnection du socket");
 				socket.close();
 			} catch (final IOException e1) {
 				PTAThread.LOGGER.error(

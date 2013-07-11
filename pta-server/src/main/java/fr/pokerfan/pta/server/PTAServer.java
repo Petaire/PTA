@@ -41,7 +41,7 @@ public class PTAServer {
 			try {
 				// on attend les connections et on les sépares dans des threads
 				// différents
-				final Socket socketConnection = serverSocket.accept();
+				final Socket socketConnection = serverSocket.accept();// bloquant
 				final PTAThread ptaThread = new PTAThread(socketConnection);
 				final Thread thread = new Thread(ptaThread);
 				thread.start();
