@@ -1,0 +1,461 @@
+14:55:15,347 DEBUG [PTAServer] Initialisation du ServerSocket
+14:55:15,347 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+14:55:25,488 DEBUG [PTAThread] Démarrage du thread
+14:55:41,066 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+14:55:47,425 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+14:55:49,597 WARN  [PTAThread] Déconnection du socket
+14:57:50,908 DEBUG [PTAThread] Démarrage du thread
+14:58:19,126 WARN  [PTAThread] Déconnection du socket
+14:58:21,079 DEBUG [PTAThread] Démarrage du thread
+14:58:22,157 WARN  [PTAThread] Déconnection du socket
+14:58:48,515 DEBUG [PTAThread] Démarrage du thread
+14:58:57,343 WARN  [PTAThread] Déconnection du socket
+14:59:14,780 DEBUG [PTAThread] Démarrage du thread
+14:59:35,014 WARN  [PTAThread] Déconnection du socket
+14:59:59,013 DEBUG [PTAThread] Démarrage du thread
+15:00:00,763 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:02,935 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:03,732 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:05,763 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:05,888 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,091 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,404 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,404 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,404 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,591 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,607 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,607 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,794 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,997 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:06,997 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,200 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,200 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,200 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,497 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,497 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:07,497 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:17,497 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:19,575 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:19,872 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:19,872 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,075 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,278 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,278 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,512 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,778 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:20,778 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:21,012 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:21,184 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:21,387 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:22,231 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:22,591 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:22,794 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:22,997 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:23,262 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:23,465 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:23,669 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,012 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,200 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,403 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,606 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,606 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,606 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,809 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:24,809 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:25,106 INFO  [PTAThread] Fin de la récupération. Réinitialisation du buffer.
+15:00:55,246 WARN  [PTAThread] Déconnection du socket
+19:16:10,932 DEBUG [PTAServer] Initialisation du ServerSocket
+19:16:10,948 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:16:32,978 DEBUG [PTAThread] Démarrage du thread
+19:16:46,977 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: parser must be on START_ELEMENT to read next text
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.getElementText(XMLStreamReaderImpl.java:834)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+19:18:49,754 DEBUG [PTAThread] Démarrage du thread
+19:19:13,503 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: parser must be on START_ELEMENT to read next text
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.getElementText(XMLStreamReaderImpl.java:834)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+19:20:21,016 DEBUG [PTAServer] Initialisation du ServerSocket
+19:20:21,016 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:20:29,750 DEBUG [PTAThread] Démarrage du thread
+19:23:15,697 DEBUG [PTAServer] Initialisation du ServerSocket
+19:23:15,697 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:23:21,665 DEBUG [PTAThread] Démarrage du thread
+19:30:28,915 DEBUG [PTAThread] Démarrage du thread
+19:31:09,210 DEBUG [PTAThread] Démarrage du thread
+19:33:30,439 DEBUG [PTAThread] Démarrage du thread
+19:35:35,075 DEBUG [PTAServer] Initialisation du ServerSocket
+19:35:35,075 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:35:52,074 DEBUG [PTAThread] Démarrage du thread
+19:37:29,649 DEBUG [PTAServer] Initialisation du ServerSocket
+19:37:29,649 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:37:56,929 DEBUG [PTAServer] Initialisation du ServerSocket
+19:37:56,929 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:38:00,257 DEBUG [PTAThread] Démarrage du thread
+19:44:38,648 DEBUG [PTAServer] Initialisation du ServerSocket
+19:44:38,648 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:44:48,210 DEBUG [PTAThread] Démarrage du thread
+19:45:13,693 DEBUG [PTAServer] Initialisation du ServerSocket
+19:45:13,693 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:45:31,849 DEBUG [PTAThread] Démarrage du thread
+19:46:11,972 DEBUG [PTAServer] Initialisation du ServerSocket
+19:46:11,972 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:46:23,394 DEBUG [PTAThread] Démarrage du thread
+19:48:50,341 DEBUG [PTAThread] Démarrage du thread
+19:52:00,521 DEBUG [PTAServer] Initialisation du ServerSocket
+19:52:00,521 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:52:10,115 DEBUG [PTAThread] Démarrage du thread
+19:52:15,646 DEBUG [PTAThread] Déconnection du socket
+19:52:55,222 DEBUG [PTAServer] Initialisation du ServerSocket
+19:52:55,222 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:53:06,784 DEBUG [PTAThread] Démarrage du thread
+19:54:21,907 DEBUG [PTAThread] Déconnection du socket
+19:55:51,771 DEBUG [PTAServer] Initialisation du ServerSocket
+19:55:51,771 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:56:23,601 DEBUG [PTAThread] Démarrage du thread
+19:57:15,168 DEBUG [PTAThread] Démarrage du thread
+19:58:50,909 DEBUG [PTAServer] Initialisation du ServerSocket
+19:58:50,909 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+19:59:07,239 DEBUG [PTAThread] Démarrage du thread
+19:59:38,929 DEBUG [PTAThread] Démarrage du thread
+19:59:39,085 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,54]
+Message: The element type "room" must be terminated by the matching end-tag "</room>".
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+19:59:39,085 DEBUG [PTAThread] Déconnection du socket
+20:00:28,023 DEBUG [PTAThread] Démarrage du thread
+20:00:28,117 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,68]
+Message: The end-tag for element type "tournoi" must end with a '>' delimiter.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:00:28,117 DEBUG [PTAThread] Déconnection du socket
+20:01:30,086 DEBUG [PTAThread] Démarrage du thread
+20:01:30,242 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,225]
+Message: The end-tag for element type "position" must end with a '>' delimiter.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:01:30,242 DEBUG [PTAThread] Déconnection du socket
+20:02:19,352 DEBUG [PTAThread] Démarrage du thread
+20:02:19,492 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:02:19,492 DEBUG [PTAThread] Déconnection du socket
+20:03:19,743 DEBUG [PTAThread] Démarrage du thread
+20:03:24,946 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:03:24,946 DEBUG [PTAThread] Déconnection du socket
+20:03:50,665 DEBUG [PTAThread] Démarrage du thread
+20:03:55,774 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:03:55,774 DEBUG [PTAThread] Déconnection du socket
+20:04:48,962 DEBUG [PTAServer] Initialisation du ServerSocket
+20:04:48,962 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:04:51,930 DEBUG [PTAThread] Démarrage du thread
+20:05:46,132 DEBUG [PTAServer] Initialisation du ServerSocket
+20:05:46,148 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:05:49,476 DEBUG [PTAThread] Démarrage du thread
+20:05:54,523 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:05:54,523 DEBUG [PTAThread] Déconnection du socket
+20:06:48,834 DEBUG [PTAThread] Démarrage du thread
+20:07:15,677 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:67)
+	at java.lang.Thread.run(Thread.java:619)
+20:07:15,677 DEBUG [PTAThread] Déconnection du socket
+20:08:57,612 DEBUG [PTAServer] Initialisation du ServerSocket
+20:08:57,627 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:09:03,705 DEBUG [PTAThread] Démarrage du thread
+20:09:03,705 INFO  [PTAThread] Start of document
+20:09:06,658 DEBUG [PTAThread] Démarrage du thread
+20:09:06,674 INFO  [PTAThread] Start of document
+20:09:41,079 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:71)
+	at java.lang.Thread.run(Thread.java:619)
+20:09:41,095 DEBUG [PTAThread] Déconnection du socket
+20:09:48,829 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,636]
+Message: Connection reset
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:592)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:71)
+	at java.lang.Thread.run(Thread.java:619)
+20:09:48,829 DEBUG [PTAThread] Déconnection du socket
+20:11:31,904 DEBUG [PTAServer] Initialisation du ServerSocket
+20:11:31,904 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:11:36,263 DEBUG [PTAThread] Démarrage du thread
+20:11:36,263 INFO  [PTAThread] Start of document
+20:13:31,463 DEBUG [PTAServer] Initialisation du ServerSocket
+20:13:31,463 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:13:42,603 DEBUG [PTAThread] Démarrage du thread
+20:13:42,681 INFO  [PTAThread] Start of document
+20:16:37,940 DEBUG [PTAServer] Initialisation du ServerSocket
+20:16:37,940 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:16:47,393 DEBUG [PTAThread] Démarrage du thread
+20:16:47,393 INFO  [PTAThread] Start of document
+20:17:33,454 DEBUG [PTAServer] Initialisation du ServerSocket
+20:17:33,454 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:17:41,172 DEBUG [PTAThread] Démarrage du thread
+20:17:45,110 INFO  [PTAThread] Start of document
+20:18:04,187 DEBUG [PTAThread] Démarrage du thread
+20:18:06,984 INFO  [PTAThread] Start of document
+20:18:11,187 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:65)
+	at java.lang.Thread.run(Thread.java:619)
+20:18:11,187 DEBUG [PTAThread] Déconnection du socket
+20:18:22,124 DEBUG [PTAServer] Initialisation du ServerSocket
+20:18:22,124 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:18:27,920 DEBUG [PTAThread] Démarrage du thread
+20:18:31,280 INFO  [PTAThread] Start of document
+20:31:08,219 DEBUG [PTAServer] Initialisation du ServerSocket
+20:31:08,219 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:31:24,156 DEBUG [PTAThread] Démarrage du thread
+20:33:17,527 DEBUG [PTAThread] Démarrage du thread
+20:33:34,620 DEBUG [PTAServer] Initialisation du ServerSocket
+20:33:34,620 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:33:42,588 DEBUG [PTAThread] Démarrage du thread
+20:33:42,588 INFO  [PTAThread] Start of document
+20:33:42,588 DEBUG [PTAThread] Déconnection du socket
+20:34:59,773 DEBUG [PTAServer] Initialisation du ServerSocket
+20:34:59,789 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:35:08,882 DEBUG [PTAThread] Démarrage du thread
+20:35:08,882 INFO  [PTAThread] Start of document
+20:35:08,882 INFO  [PTAThread] Start element
+20:35:08,898 INFO  [PTAThread] Start element
+20:35:08,898 INFO  [PTAThread] Characters
+20:35:08,898 INFO  [PTAThread] Default
+20:35:08,898 INFO  [PTAThread] Start element
+20:35:08,898 INFO  [PTAThread] Characters
+20:35:08,898 INFO  [PTAThread] Default
+20:35:08,898 INFO  [PTAThread] Start element
+20:35:08,898 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Start element
+20:35:08,913 INFO  [PTAThread] Characters
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:35:08,913 INFO  [PTAThread] Default
+20:37:24,877 DEBUG [PTAServer] Initialisation du ServerSocket
+20:37:24,877 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:37:29,205 DEBUG [PTAThread] Démarrage du thread
+20:37:29,220 INFO  [PTAThread] Start of document
+20:37:29,220 INFO  [PTAThread] Start element : tournoi
+20:37:29,220 INFO  [PTAThread] Start element : tournoiId
+20:37:29,220 INFO  [PTAThread] Characters : 132456
+20:37:29,220 INFO  [PTAThread] End element : tournoiId
+20:37:29,220 INFO  [PTAThread] Start element : room
+20:37:29,220 INFO  [PTAThread] Characters : WINAMAX
+20:37:29,220 INFO  [PTAThread] End element : room
+20:37:29,220 INFO  [PTAThread] Start element : hands
+20:37:29,220 INFO  [PTAThread] Start element : blind
+20:37:29,220 INFO  [PTAThread] Characters : 20
+20:37:29,220 INFO  [PTAThread] End element : blind
+20:37:29,220 INFO  [PTAThread] Start element : antes
+20:37:29,220 INFO  [PTAThread] End element : antes
+20:37:29,220 INFO  [PTAThread] Start element : nbJoueurs
+20:37:29,220 INFO  [PTAThread] Characters : 4
+20:37:29,220 INFO  [PTAThread] End element : nbJoueurs
+20:37:29,220 INFO  [PTAThread] Start element : round
+20:37:29,220 INFO  [PTAThread] Characters : PRE_FLOP
+20:37:29,220 INFO  [PTAThread] End element : round
+20:37:29,220 INFO  [PTAThread] Start element : actions
+20:37:29,220 INFO  [PTAThread] Start element : player
+20:37:29,220 INFO  [PTAThread] Start element : name
+20:37:29,220 INFO  [PTAThread] Characters : ThePetaire
+20:37:29,220 INFO  [PTAThread] End element : name
+20:37:29,220 INFO  [PTAThread] Start element : stack
+20:37:29,220 INFO  [PTAThread] Characters : 2000
+20:37:29,220 INFO  [PTAThread] End element : stack
+20:37:29,220 INFO  [PTAThread] Start element : position
+20:37:29,220 INFO  [PTAThread] Characters : 1
+20:37:29,220 INFO  [PTAThread] End element : position
+20:37:29,220 INFO  [PTAThread] Start element : action
+20:37:29,220 INFO  [PTAThread] Characters : FOLD
+20:37:29,220 INFO  [PTAThread] End element : action
+20:37:29,220 INFO  [PTAThread] End element : player
+20:37:29,220 INFO  [PTAThread] End element : actions
+20:37:29,220 INFO  [PTAThread] Start element : actions
+20:37:29,220 INFO  [PTAThread] Start element : player
+20:37:29,220 INFO  [PTAThread] Start element : name
+20:37:29,220 INFO  [PTAThread] Characters : TommyDDr
+20:37:29,220 INFO  [PTAThread] End element : name
+20:37:29,220 INFO  [PTAThread] Start element : stack
+20:37:29,220 INFO  [PTAThread] Characters : 1580
+20:37:29,220 INFO  [PTAThread] End element : stack
+20:37:29,220 INFO  [PTAThread] Start element : position
+20:37:29,220 INFO  [PTAThread] Characters : 2
+20:37:29,220 INFO  [PTAThread] End element : position
+20:37:29,220 INFO  [PTAThread] Start element : action
+20:37:29,220 INFO  [PTAThread] Characters : FOLD
+20:37:29,220 INFO  [PTAThread] End element : action
+20:37:29,220 INFO  [PTAThread] End element : player
+20:37:29,220 INFO  [PTAThread] End element : actions
+20:37:29,220 INFO  [PTAThread] Start element : actions
+20:37:29,220 INFO  [PTAThread] Start element : player
+20:37:29,220 INFO  [PTAThread] Start element : name
+20:37:29,220 INFO  [PTAThread] Characters : Fiflex
+20:37:29,220 INFO  [PTAThread] End element : name
+20:37:29,220 INFO  [PTAThread] Start element : stack
+20:37:29,220 INFO  [PTAThread] Characters : 3500
+20:37:29,220 INFO  [PTAThread] End element : stack
+20:37:29,220 INFO  [PTAThread] Start element : position
+20:37:29,220 INFO  [PTAThread] Characters : 3
+20:37:29,220 INFO  [PTAThread] End element : position
+20:37:29,220 INFO  [PTAThread] Start element : action
+20:37:29,220 INFO  [PTAThread] Characters : CALL
+20:37:29,220 INFO  [PTAThread] End element : action
+20:37:29,220 INFO  [PTAThread] End element : player
+20:37:29,220 INFO  [PTAThread] End element : actions
+20:37:29,220 INFO  [PTAThread] Start element : actions
+20:37:29,220 INFO  [PTAThread] Start element : player
+20:37:29,220 INFO  [PTAThread] Start element : name
+20:37:29,220 INFO  [PTAThread] Characters : Mendos
+20:37:29,220 INFO  [PTAThread] End element : name
+20:37:29,220 INFO  [PTAThread] Start element : stack
+20:37:29,220 INFO  [PTAThread] Characters : 30
+20:37:29,220 INFO  [PTAThread] End element : stack
+20:37:29,220 INFO  [PTAThread] Start element : position
+20:37:29,220 INFO  [PTAThread] Characters : 4
+20:37:29,220 INFO  [PTAThread] End element : position
+20:37:29,220 INFO  [PTAThread] Start element : action
+20:37:29,220 INFO  [PTAThread] Characters : CHECK
+20:37:29,220 INFO  [PTAThread] End element : action
+20:37:29,220 INFO  [PTAThread] End element : player
+20:37:29,220 INFO  [PTAThread] End element : actions
+20:37:29,220 INFO  [PTAThread] End element : hands
+20:37:29,220 INFO  [PTAThread] End element : tournoi
+20:44:10,221 DEBUG [PTAThread] Démarrage du thread
+20:45:02,094 DEBUG [PTAServer] Initialisation du ServerSocket
+20:45:02,094 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:45:05,656 DEBUG [PTAThread] Démarrage du thread
+20:45:05,687 INFO  [PTAThread] Start of document : 1.0
+20:45:05,687 INFO  [PTAThread] Start element : tournoi
+20:45:05,687 INFO  [PTAThread] Characters : blabla
+20:45:05,687 INFO  [PTAThread] End element : tournoi
+20:46:03,154 DEBUG [PTAServer] Initialisation du ServerSocket
+20:46:03,154 DEBUG [PTAServer] Utilisation du port par defaut : 54504
+20:46:07,200 DEBUG [PTAThread] Démarrage du thread
+20:46:07,200 INFO  [PTAThread] Start of document : 1.0
+20:46:07,200 INFO  [PTAThread] Start element : tournoi
+20:46:07,200 INFO  [PTAThread] Characters : blabla
+20:46:07,200 INFO  [PTAThread] End element : tournoi
+20:46:07,216 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,26]
+Message: Content is not allowed in trailing section.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:78)
+	at java.lang.Thread.run(Thread.java:619)
+20:46:07,216 DEBUG [PTAThread] Déconnection du socket
+20:46:30,778 DEBUG [PTAThread] Démarrage du thread
+20:46:30,903 INFO  [PTAThread] Start of document : 1.0
+20:46:30,903 INFO  [PTAThread] Start element : tournoi
+20:46:30,903 INFO  [PTAThread] Characters : blabla
+20:46:30,903 INFO  [PTAThread] End element : tournoi
+20:46:58,605 DEBUG [PTAThread] Démarrage du thread
+20:46:58,667 INFO  [PTAThread] Start of document : 1.0
+20:46:58,667 INFO  [PTAThread] Start element : tournoi
+20:46:58,667 INFO  [PTAThread] Characters : blabla
+20:46:58,667 INFO  [PTAThread] End element : tournoi

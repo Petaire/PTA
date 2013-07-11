@@ -10,5 +10,5 @@ package fr.pokerfan.pta.bo.enums;
  * 
  */
 public enum Round {
-	PRE_FLOP, FLOP, TURN, RIVER;
+	PRE_FLOP, FLOP, TURN, RIVER, SHOWDOWN;
 }
