@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.utils;
+
+/**
+ * 
+ * Classe utilitaire générique
+ * @author pierre.kerichard
+ *
+ */
+public final class PTAUtils {
+
+	private  PTAUtils() {
+
+	}
+}

@@ -1,0 +1,10 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+public class PTADataManager extends AbstractManager {
+
+	public static final Integer ID_MANAGER = 4;
+
+}

@@ -1,0 +1,20 @@
+/*
+ * Document confidentiel - Diffusion interdite 
+ */
+package fr.pokerfan.pta.bo.turnament;
+
+import java.util.Observable;
+
+
+/**
+ * 
+ * Tournoi/SitNGo
+ * 
+ */
+public class Turnament extends Observable{
+	
+	public Turnament() {
+		
+	}
+
+}

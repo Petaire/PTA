@@ -1,0 +1,16 @@
+package fr.pokerfan.pta.server.manager;
+
+public class AbstractManager implements Manager{
+
+	protected String[] input;
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param input
+	 *            données
+	 */
+	public PTATrackerManager(final String[] input) {
+		this.input = input;
+	}
+}

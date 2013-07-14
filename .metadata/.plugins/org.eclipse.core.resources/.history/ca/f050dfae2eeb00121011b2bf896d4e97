@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.reader;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.commons.logging.impl.Log4JLogger;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class PTABufferedReader extends BufferedReader {
+
+	private static final Log4JLogger LOGGER = new Log4JLogger(
+			PTABufferedReader.class.getCanonicalName());
+
+	private final Reader in;
+	private final char[] charBuffer;
+
+	public PTABufferedReader(final Reader in) {
+		super(in);
+		this.in = in;
+		charBuffer = new char[8192];
+	}
+
+	public String readAll() {
+		final StringBuffer buffer = new StringBuffer();
+		try {
+			while (!in.ready()) {
+
+			}
+
+			in.read(charBuffer);
+			in.close();
+			for (final char c : charBuffer) {
+				buffer.append(c);
+			}
+		} catch (final IOException e) {
+			PTABufferedReader.LOGGER.error(
+					"Erreur lors de la lecture de l'input", e);
+		}
+
+		return buffer.toString();
+	}
+
+}

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.reader;
+
+import java.io.BufferedReader;
+
+/**
+ * @author pierre.kerichard
+ *
+ */
+public class PTABufferedReader extends BufferedReader {
+
+}

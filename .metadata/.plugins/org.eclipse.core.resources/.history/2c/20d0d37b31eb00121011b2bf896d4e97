@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class PTAImportManager extends AbstractManager {
+
+	public PTAImportManager(String[] input) {
+		super(input);
+		// TODO Auto-generated constructor stub
+	}
+
+}

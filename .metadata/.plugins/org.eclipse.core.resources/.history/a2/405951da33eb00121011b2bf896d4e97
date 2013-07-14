@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class PTAImportManager extends AbstractManager {
+
+	public static final Integer ID_MANAGER = 1;
+
+	public PTAImportManager(final String[] input) {
+		super(input);
+	}
+
+}

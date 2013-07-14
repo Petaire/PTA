@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.bo.player;
+
+/**
+ * Adversaire
+ * 
+ * @author pierre.kerichard
+ *
+ */
+public class Villain extends Player {
+
+}

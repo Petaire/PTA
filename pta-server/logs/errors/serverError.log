@@ -82,3 +82,117 @@ Message: Content is not allowed in trailing section.
 	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:594)
 	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:78)
 	at java.lang.Thread.run(Thread.java:619)
+21:56:45,091 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,638]
+Message: Le balisage du document suivant l'élément racine doit avoir un format correct.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(Unknown Source)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:78)
+	at java.lang.Thread.run(Unknown Source)
+21:57:05,343 ERROR [PTAThread] Erreur lors de la création du Xml reader 
+javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,637]
+Message: Le balisage du document suivant l'élément racine doit avoir un format correct.
+	at com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(Unknown Source)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:78)
+	at java.lang.Thread.run(Unknown Source)
+16:58:53,711 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+16:58:53,781 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:88)
+	at java.lang.Thread.run(Thread.java:619)
+17:03:52,683 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+17:03:52,714 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:88)
+	at java.lang.Thread.run(Thread.java:619)
+17:04:30,246 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+17:04:30,253 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:88)
+	at java.lang.Thread.run(Thread.java:619)
+17:07:15,916 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+17:07:15,933 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:89)
+	at java.lang.Thread.run(Thread.java:619)
+17:08:26,386 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+17:08:26,421 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:89)
+	at java.lang.Thread.run(Thread.java:619)
+17:08:54,574 ERROR [PTABufferedReader] Erreur lors de la lecture de l'input
+java.net.SocketException: socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	at java.io.Reader.read(Reader.java:123)
+	at fr.pokerfan.pta.server.reader.PTABufferedReader.readAll(PTABufferedReader.java:50)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:59)
+	at java.lang.Thread.run(Thread.java:619)
+17:08:54,578 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getInputStream(Socket.java:774)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:89)
+	at java.lang.Thread.run(Thread.java:619)
+17:15:22,839 ERROR [PTAThread] Erreur lors de la fermeture du socket 
+java.net.SocketException: Socket is closed
+	at java.net.Socket.getOutputStream(Socket.java:814)
+	at fr.pokerfan.pta.server.PTAThread.run(PTAThread.java:89)
+	at java.lang.Thread.run(Thread.java:619)

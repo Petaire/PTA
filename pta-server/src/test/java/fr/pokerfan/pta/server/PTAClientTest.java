@@ -3,8 +3,15 @@
  */
 package fr.pokerfan.pta.server;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Socket;
+
+import org.apache.commons.io.IOUtils;
+import org.springframework.util.ResourceUtils;
 
 /**
  * @author pierre.kerichard
@@ -16,18 +23,30 @@ public class PTAClientTest {
 		final Socket clientSocket = new Socket("127.0.0.1", 54504);
 		final DataOutputStream outToServer = new DataOutputStream(clientSocket
 				.getOutputStream());
+		while (true) {
+			System.out.println("sending request");
+			sendRequest(outToServer);
+			final StringBuffer result = new StringBuffer();
+			System.out.println("waiting for answer...");
+			waitForAnswer(result, new BufferedReader(new InputStreamReader(
+					clientSocket.getInputStream())));
+			System.out.println("answer : " + result);
+		}
 
-		// while (true) {
-		// final String saisie = sc.nextLine();
-		// if ("-1".equals(saisie)) {
-		// return;
-		// }
-		outToServer
-				.writeBytes("<tournoi>\n<tournoiId>132456</tournoiId><room>WINAMAX</room><hands><blind>20</blind><antes></antes><nbJoueurs>4</nbJoueurs><round>PRE_FLOP</round><actions><player><name>ThePetaire</name><stack>2000</stack><position>1</position><action>FOLD</action></player></actions><actions><player><name>TommyDDr</name><stack>1580</stack><position>2</position><action>FOLD</action></player></actions><actions><player><name>Fiflex</name><stack>3500</stack><position>3</position><action>CALL</action></player></actions><actions><player><name>Mendos</name><stack>30</stack><position>4</position><action>CHECK</action></player></actions></hands></tournoi>");
-		// }
-		// outToServer.writeBytes("<tournoi>blabla</tournoi>\n");
-		outToServer.close();
-		clientSocket.close();
+	}
 
+	public static void waitForAnswer(final StringBuffer result,
+			final BufferedReader buffered) throws IOException {
+		final String i = buffered.readLine();
+		result.append(i);
+	}
+
+	public static void sendRequest(final DataOutputStream outToServer)
+			throws IOException {
+		final FileInputStream file = new FileInputStream(
+				ResourceUtils
+						.getFile("C:\\Users\\sophie\\Documents\\GitHub\\PTA\\pta-server\\src\\test\\resources\\input.txt"));
+		// final DataInputStream data = new DataInputStream(file);
+		IOUtils.copy(file, outToServer);
 	}
 }

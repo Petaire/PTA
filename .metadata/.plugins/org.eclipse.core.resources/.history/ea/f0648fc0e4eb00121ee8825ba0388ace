@@ -1,0 +1,94 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+import java.util.List;
+
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.logging.impl.Log4JLogger;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	private static final Log4JLogger LOGGER = new Log4JLogger(
+			ManagerFactory.class.getCanonicalName());
+
+	private static final ManagerFactory managerFactory = new ManagerFactory();
+
+	private List<Manager> managers;
+	private Manager advisorManager;
+	private Manager dataManager;
+	private Manager importManager;
+	private Manager trackerManager;
+
+	private ManagerFactory() {
+	}
+
+	public static ManagerFactory getInstance() {
+		return managerFactory;
+	}
+
+	public Manager getManager(final int idManager) {
+		return getManagerById(idManager);
+	}
+
+	private Manager getManagerById(final int idManager) {
+		if (CollectionUtils.isNotEmpty(managers)) {
+			for (final Manager manager : managers) {
+				if (idManager == manager.getIdManager()) {
+					return manager;
+				}
+
+			}
+		}
+		LOGGER.error("Aucun manager défini pour les requêtes d'id : "
+				+ idManager);
+	}
+
+	/**
+	 * @param advisorManager
+	 *            the advisorManager to set
+	 */
+	@Qualifier("advisorManager")
+	@Required
+	public void setAdvisorManager(final Manager advisorManager) {
+		this.advisorManager = advisorManager;
+	}
+
+	/**
+	 * @param dataManager
+	 *            the dataManager to set
+	 */
+	@Qualifier("dataManager")
+	@Required
+	public void setDataManager(final Manager dataManager) {
+		this.dataManager = dataManager;
+	}
+
+	/**
+	 * @param importManager
+	 *            the importManager to set
+	 */
+	@Qualifier("importManager")
+	@Required
+	public void setImportManager(final Manager importManager) {
+		this.importManager = importManager;
+	}
+
+	/**
+	 * @param trackerManager
+	 *            the trackerManager to set
+	 */
+	@Qualifier("trackerManager")
+	@Required
+	public void setTrackerManager(final Manager trackerManager) {
+		this.trackerManager = trackerManager;
+	}
+
+}

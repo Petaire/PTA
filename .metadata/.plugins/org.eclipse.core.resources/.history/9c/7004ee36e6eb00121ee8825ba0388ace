@@ -1,0 +1,76 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+import java.util.List;
+
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.logging.impl.Log4JLogger;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	private static final Log4JLogger LOGGER = new Log4JLogger(
+			ManagerFactory.class.getCanonicalName());
+
+	private static final ManagerFactory managerFactory = new ManagerFactory();
+
+	private List<Manager> managers;
+
+	private ManagerFactory() {
+	}
+
+	public static ManagerFactory getInstance() {
+		return managerFactory;
+	}
+
+	/**
+	 * Récupère l'instance de manager correspondant
+	 * 
+	 * @param idManager
+	 *            id du manager recherché
+	 * @return l'instance de manager recherchée
+	 */
+	public Manager getManager(final int idManager) {
+		return getManagerById(idManager);
+	}
+
+	/**
+	 * Récupère un manager en fonction de son id.
+	 * 
+	 * @param idManager
+	 *            id du manager recherche
+	 * @return le manager ayant l'id passé en parètre <br>
+	 *         <code>null</code> si aucun manager trouvé
+	 */
+	private Manager getManagerById(final int idManager) {
+		if (CollectionUtils.isNotEmpty(managers)) {
+			for (final Manager manager : managers) {
+				if (idManager == manager.getIdManager()) {
+					return manager;
+				}
+
+			}
+		}
+		LOGGER.error("Aucun manager défini pour les requêtes d'id : "
+				+ idManager);
+		return null;
+	}
+
+	/**
+	 * Injection de tous les beans implementant l'interface Manager
+	 * 
+	 * @param managers
+	 *            liste des managers disponible
+	 */
+	@Autowired
+	public void setManagers(final List<Manager> managers) {
+		this.managers = managers;
+	}
+
+}

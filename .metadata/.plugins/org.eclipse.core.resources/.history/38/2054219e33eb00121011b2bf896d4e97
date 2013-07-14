@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public interface Manager {
+
+	String process();
+
+	void parse();
+
+	void render();
+
+}

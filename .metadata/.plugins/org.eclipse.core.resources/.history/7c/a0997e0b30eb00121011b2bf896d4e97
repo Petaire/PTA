@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ *
+ */
+public class PTAImportManager {
+
+}

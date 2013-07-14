@@ -1,0 +1,68 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	private final ManagerFactory managerFactory = new ManagerFactory();
+
+	private Manager advisorManager;
+	private Manager dataManager;
+	private Manager importManager;
+	private Manager trackerManager;
+
+	private ManagerFactory() {
+	}
+
+	public static ManagerFactory getInstance() {
+		return managerFactory;
+	}
+
+	public Manager getManager(final int idManager) {
+		switch (idManager) {
+		case AbstractManager.ID_IMPORT_MANAGER:
+			return importManager;
+		default:
+
+			return null;
+		}
+	}
+
+	/**
+	 * @param advisorManager
+	 *            the advisorManager to set
+	 */
+	public void setAdvisorManager(final Manager advisorManager) {
+		this.advisorManager = advisorManager;
+	}
+
+	/**
+	 * @param dataManager
+	 *            the dataManager to set
+	 */
+	public void setDataManager(final Manager dataManager) {
+		this.dataManager = dataManager;
+	}
+
+	/**
+	 * @param importManager
+	 *            the importManager to set
+	 */
+	public void setImportManager(final Manager importManager) {
+		this.importManager = importManager;
+	}
+
+	/**
+	 * @param trackerManager
+	 *            the trackerManager to set
+	 */
+	public void setTrackerManager(final Manager trackerManager) {
+		this.trackerManager = trackerManager;
+	}
+
+}

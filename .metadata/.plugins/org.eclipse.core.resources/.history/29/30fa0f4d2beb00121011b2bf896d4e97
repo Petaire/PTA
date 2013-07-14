@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.reader;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class PTABufferedReader extends BufferedReader {
+
+	private final Reader in;
+	private final char[] charBuffer;
+
+	public PTABufferedReader(final Reader in) {
+		super(in);
+		this.in = in;
+		charBuffer = new char[8192];
+	}
+
+	public String readAll() {
+		final StringBuffer buffer = new StringBuffer();
+		try {
+			in.read(charBuffer);
+			for (final char c : charBuffer) {
+				buffer.append(c);
+			}
+		} catch (final IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return buffer.toString();
+	}
+
+}

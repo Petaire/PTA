@@ -1,0 +1,9 @@
+#Wed Jul 10 23:14:27 CEST 2013
+eclipse.preferences.version=1
+encoding//src/main/java=ISO-8859-1
+encoding//src/main/resources=ISO-8859-1
+encoding//src/test/java=ISO-8859-1
+encoding//src/test/resources=ISO-8859-1
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
+org.eclipse.jdt.core.compiler.compliance=1.6
+org.eclipse.jdt.core.compiler.source=1.6

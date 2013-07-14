@@ -1,0 +1,57 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+import java.util.List;
+
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.logging.impl.Log4JLogger;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	private static final Log4JLogger LOGGER = new Log4JLogger(
+			ManagerFactory.class.getCanonicalName());
+
+	private static final ManagerFactory managerFactory = new ManagerFactory();
+
+	private List<Manager> managers;
+
+	private ManagerFactory() {
+	}
+
+	public static ManagerFactory getInstance() {
+		return managerFactory;
+	}
+
+	public Manager getManager(final int idManager) {
+		return getManagerById(idManager);
+	}
+
+	private Manager getManagerById(final int idManager) {
+		if (CollectionUtils.isNotEmpty(managers)) {
+			for (final Manager manager : managers) {
+				if (idManager == manager.getIdManager()) {
+					return manager;
+				}
+
+			}
+		}
+		LOGGER.error("Aucun manager défini pour les requêtes d'id : "
+				+ idManager);
+		return null;
+	}
+
+	@in
+	public void setManagers(List<Manager> managers) {
+		this.managers = managers;
+	}
+
+	
+}

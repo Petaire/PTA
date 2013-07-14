@@ -1,0 +1,11 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+import org.springframework.stereotype.Component;
+
+@Component("trackerManager")
+public class PTATrackerManager extends AbstractManager {
+
+}

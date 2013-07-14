@@ -1,0 +1,12 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+public class PTAAdvisorManager extends AbstractManager {
+
+	public PTAAdvisorManager(String[] input) {
+		super(input);
+	}
+
+}

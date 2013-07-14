@@ -3,17 +3,19 @@
  */
 package fr.pokerfan.pta.server;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Socket;
 
-import javax.xml.stream.XMLStreamConstants;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
-
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.impl.Log4JLogger;
 
-import com.sun.org.apache.xerces.internal.impl.PropertyManager;
-import com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl;
+import fr.pokerfan.pta.bo.PTAConstantes;
+import fr.pokerfan.pta.server.manager.Manager;
+import fr.pokerfan.pta.server.manager.ManagerFactory;
+import fr.pokerfan.pta.server.reader.PTABufferedReader;
 
 /**
  * 1 Thread = 1 connection
@@ -27,6 +29,7 @@ public class PTAThread implements Runnable {
 			.getCanonicalName());
 
 	private Socket socket;
+	private final ManagerFactory managerFactory;
 
 	/**
 	 * Constructeur
@@ -34,8 +37,9 @@ public class PTAThread implements Runnable {
 	 * @param socket
 	 *            socket
 	 */
-	public PTAThread(final Socket socket) {
+	public PTAThread(final Socket socket, final ManagerFactory managerFactory) {
 		this.socket = socket;
+		this.managerFactory = managerFactory;
 	}
 
 	/**
@@ -46,63 +50,42 @@ public class PTAThread implements Runnable {
 	public void run() {
 		PTAThread.LOGGER.debug("Démarrage du thread");
 		try {
-			final PropertyManager props = new PropertyManager(
-					PropertyManager.CONTEXT_READER);
-			XMLStreamReader xmlReader;
-			// Attente de l'envoi des données par le client
+			// création du reader
+			final PTABufferedReader reader = new PTABufferedReader(
+					new InputStreamReader(socket.getInputStream()));
+
 			while (true) {
-				if (socket.getInputStream().available() > 1) {
-					// Création du reader
-					xmlReader = new XMLStreamReaderImpl(
-							socket.getInputStream(), props);
-					break;
-				}
+				// Récuperation de l'input complet
+				final String input = reader.readAll();
 
-			}
+				LOGGER.info("Le client envoie : " + input);
+				final String[] splitedInput = input
+						.split(PTAConstantes.CHAR_ASCII_1.toString());
 
-			// NPE safe
-			if (xmlReader != null) {
-				// Parcours des élements
-				while (xmlReader.hasNext()) {
-					switch (xmlReader.getEventType()) {
-					case XMLStreamConstants.START_DOCUMENT:
-						PTAThread.LOGGER.info("Start of document");
-						break;
-					case XMLStreamConstants.START_ELEMENT:
-						PTAThread.LOGGER.info("Start element : "
-								+ xmlReader.getName());
-						break;
-					case XMLStreamConstants.END_ELEMENT:
-						PTAThread.LOGGER.info("End element : "
-								+ xmlReader.getName());
-						break;
-					case XMLStreamConstants.CHARACTERS:
-						PTAThread.LOGGER.info("Characters : "
-								+ xmlReader.getText());
-						break;
-					default:
-						PTAThread.LOGGER.info("Default : "
-								+ xmlReader.getEventType());
-						break;
-					}
-					xmlReader.next();
-				}
+				// Création du manager en charge de traiter la demande en
+				// fonction
+				// du premier bit envoyé
+				final Manager manager = managerFactory.getManager(Integer
+						.valueOf(splitedInput[NumberUtils.INTEGER_ZERO]));
 
-				PTAThread.LOGGER.info("End of document");
-				xmlReader.close();
-				PTAThread.LOGGER.info("Fermeture de l'input stream");
-				socket.getInputStream().close();
+				// process
+				final String output = manager.process(splitedInput);
 
+				// Envoie de la réponse
+				final DataOutputStream dataOutputStream = new DataOutputStream(
+						socket.getOutputStream());
+				LOGGER.info("Envoie de la réponse " + output);
+				dataOutputStream.writeBytes(output);
+				dataOutputStream.writeBytes("\n");
+				dataOutputStream.flush();
 			}
 
 		} catch (final IOException e) {
 			PTAThread.LOGGER.warn("Déconnection du client");
-
-		} catch (final XMLStreamException e) {
-			PTAThread.LOGGER.error("Erreur lors de la création du Xml reader ",
-					e);
 		} finally {
 			try {
+				IOUtils.closeQuietly(socket.getInputStream());
+				IOUtils.closeQuietly(socket.getOutputStream());
 				PTAThread.LOGGER.debug("Déconnection du socket");
 				socket.close();
 			} catch (final IOException e1) {
