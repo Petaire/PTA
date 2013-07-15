@@ -1,0 +1,8 @@
+23:38:50,831 DEBUG [server] Initialisation du ServerSocket
+23:38:50,833 DEBUG [server] Utilisation du port par defaut : 54504
+23:41:11,808 ERROR [server] test de ouf
+23:41:11,810 DEBUG [server] Initialisation du ServerSocket
+23:41:11,811 DEBUG [server] Utilisation du port par defaut : 54504
+23:43:14,463 ERROR [PTAServer] test de ouf
+23:43:14,465 DEBUG [PTAServer] Initialisation du ServerSocket
+23:43:14,465 DEBUG [PTAServer] Utilisation du port par defaut : 54504

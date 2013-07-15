@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.bo;
+
+/**
+ * Constantes
+ * 
+ * @author pierre.kerichard
+ * 
+ */
+public final class PTAConstantes {
+
+	/**
+	 * Constantes déterminante le type d'evenemnt notifié aux observers
+	 */
+	public static final String NOTIFY_CHANGE_STRUCTURE = "updateStucture";
+	public static final String NOTIFY_CHANGE_PLAYERS = "updateNbPlayers";
+
+	/**
+	 * Caractère ascii 1 permettant lé découpe de la chaine envoyé par le client
+	 */
+	public static final Character CHAR_ASCII_1 = (char) 1;
+	
+	/**
+	 * Identification des managers
+	 */
+	public static final Integer ID_IMPORT_MANAGER = 1;
+	public static final Integer ID_TRACKER_MANAGER = 2;
+	public static final Integer ID_ADVISOR_MANAGER = 3;
+	public static final Integer ID_DATA_MANAGER = 4;
+	
+	/**
+	 * Constructeur
+	 */
+	private PTAConstantes() {
+		// static class, prevent instanciation
+	}
+}

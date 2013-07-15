@@ -1,0 +1,14 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+public class PTATrackerManager extends AbstractManager {
+
+	public static final Integer ID_MANAGER = 2;
+
+	public PTATrackerManager(final String[] input) {
+		super(input);
+	}
+
+}

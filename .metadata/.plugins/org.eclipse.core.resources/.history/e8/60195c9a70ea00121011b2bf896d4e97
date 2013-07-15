@@ -1,0 +1,139 @@
+/*
+ * Document confidentiel - Diffusion interdite 
+ */
+package fr.pokerfan.pta.bo.turnament;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+
+import fr.pokerfan.pta.bo.Structure;
+import fr.pokerfan.pta.bo.player.Player;
+
+
+/**
+ * 
+ * Tournoi/SitNGo
+ * 
+ */
+public class Turnament extends Observable{
+
+	/**
+	 * id technique
+	 */
+	private Long id;
+	private Long turnamentId;
+	
+private Structure structure;
+	
+	private final List<Player> players=new ArrayList<Player>();
+
+	public Turnament() {
+
+	}
+	
+	
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+	/**
+	 * @return the turnamentId
+	 */
+	public Long getTurnamentId() {
+		return turnamentId;
+	}
+
+
+
+	/**
+	 * @param turnamentId the turnamentId to set
+	 */
+	public void setTurnamentId(Long turnamentId) {
+		this.turnamentId = turnamentId;
+	}
+
+
+
+
+
+	/**
+	 * @return the structure
+	 */
+	public Structure getStructure() {
+		return structure;
+	}
+
+
+
+	/**
+	 * @param structure the structure to set
+	 */
+	public void setStructure(Structure structure) {
+		this.structure = structure;
+	}
+
+
+
+	/**
+	 * Ajout d'une liste de joueurs
+	 * 
+	 * @param players
+	 * joueurs à ajouter
+	 * 
+	 */
+	public void addPlayers(final List<Player> players){
+		this.players.addAll(players);
+		for (Player player : players) {
+			addObserver(player);
+		}
+	}
+
+	/**
+	 * Ajout d'un joueur
+	 * @param player
+	 * joueur à ajouter
+	 */
+	public void addPlayer(final Player player){
+		players.add(player);
+		addObserver(player);
+	}
+
+	/**
+	 * Suppression d'un joueur
+	 * @param player
+	 * joueur à supprimer
+	 */
+	public void removePlayer(final Player player){
+		players.remove(player);	
+		deleteObserver(player);
+	}
+
+	/**
+	 * Suppression de tous les joueurs
+	 */
+	public void clearPlayers(){
+		players.clear();
+		deleteObservers();
+	}
+
+	
+
+
+}

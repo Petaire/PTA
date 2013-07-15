@@ -1,0 +1,25 @@
+package fr.pokerfan.pta.server.manager;
+
+public abstract class AbstractManager implements Manager {
+
+	protected Integer idManager;
+	protected String[] input;
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param input
+	 *            données
+	 */
+	public AbstractManager(final String[] input) {
+		this.input = input;
+	}
+
+	public String process() {
+		parse();
+		execute();
+		return render();
+
+	}
+
+}

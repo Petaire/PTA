@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.bo;
+
+import java.math.BigInteger;
+
+/**
+ * Classe représentant la structure des blinds
+ * @author pierre.kerichard
+ *
+ */
+public class Structure {
+
+	private BigInteger montantBlinds;
+	private BigInteger montantAntes;
+	/**
+	 * @return the montantBlinds
+	 */
+	public BigInteger getMontantBlinds() {
+		return montantBlinds;
+	}
+	/**
+	 * @param montantBlinds the montantBlinds to set
+	 */
+	public void setMontantBlinds(BigInteger montantBlinds) {
+		this.montantBlinds = montantBlinds;
+	}
+	/**
+	 * @return the montantAntes
+	 */
+	public BigInteger getMontantAntes() {
+		return montantAntes;
+	}
+	/**
+	 * @param montantAntes the montantAntes to set
+	 */
+	public void setMontantAntes(BigInteger montantAntes) {
+		this.montantAntes = montantAntes;
+	}
+	
+	
+}

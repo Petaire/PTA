@@ -1,0 +1,66 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.utils;
+
+import java.math.BigDecimal;
+
+/**
+ * 
+ * Classe utilitaire générique
+ * 
+ * @author pierre.kerichard
+ * 
+ */
+public final class PTAUtils {
+
+	private static final BigDecimal BIG_DECIMAL_TWO = new BigDecimal(2);
+
+	private PTAUtils() {
+
+	}
+
+	/**
+	 * Calcul du nombre de big blindes en fonction du nombre de jetons et du
+	 * montant de la big blinde
+	 * 
+	 * @param stack
+	 *            jetons du joueur
+	 * @param montantBlind
+	 *            montant de la big blinde
+	 * 
+	 * @return le stack exprimé en big blindes
+	 */
+	public static BigDecimal calculateNbBlinds(final BigDecimal stack,
+			final BigDecimal montantBlind) {
+		return stack.divide(montantBlind);
+	}
+
+	/**
+	 * Calcul de l'aim (stack divisé par le cout d'un tour)
+	 * 
+	 * @param stack
+	 *            jetons
+	 * @param montantBlind
+	 *            montant de la big blinde
+	 * @param montantAntes
+	 *            montant des antes
+	 * @param nbJoueurs
+	 *            nombre de joueurs
+	 * 
+	 * @return le stack exprimé en nbre de tours
+	 */
+	public static Double calculateAim(final BigDecimal stack,
+			final BigDecimal montantBlind, final BigDecimal montantAntes,
+			final int nbJoueurs) {
+		final BigDecimal smallBlind = montantBlind
+				.divide(PTAUtils.BIG_DECIMAL_TWO);
+		final BigDecimal antesTotal = montantAntes.multiply(new BigDecimal(
+				nbJoueurs));
+
+		final BigDecimal resultAsBigDecimal = montantBlind.add(smallBlind).add(
+				antesTotal);
+
+		return resultAsBigDecimal.doubleValue();
+	}
+}

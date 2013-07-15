@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public interface Manager {
+
+	String process(final String[] input);
+
+	Integer getIdManager();
+
+}

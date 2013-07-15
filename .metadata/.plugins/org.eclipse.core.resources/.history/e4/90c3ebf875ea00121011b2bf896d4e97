@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.bo.player;
+
+/**
+ * @author pierre.kerichard
+ *
+ */
+public class Hero extends Player {
+
+}

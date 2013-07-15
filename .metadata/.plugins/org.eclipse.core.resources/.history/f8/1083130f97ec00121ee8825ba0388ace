@@ -1,0 +1,119 @@
+/*
+ * Document confidentiel - Diffusion interdite 
+ */
+package fr.pokerfan.pta.server;
+
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.math.NumberUtils;
+import org.apache.commons.logging.impl.Log4JLogger;
+
+import fr.pokerfan.pta.bo.PTAConstantes;
+import fr.pokerfan.pta.server.manager.Manager;
+import fr.pokerfan.pta.server.manager.ManagerFactory;
+import fr.pokerfan.pta.server.reader.PTABufferedReader;
+
+/**
+ * 1 Thread = 1 connection
+ * 
+ * @author pierre.kerichard
+ * 
+ */
+public class PTAThread implements Runnable {
+
+	private static final Log4JLogger LOGGER = new Log4JLogger(PTAThread.class
+			.getCanonicalName());
+
+	private Socket socket;
+	private final ManagerFactory managerFactory;
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param socket
+	 *            socket
+	 */
+	public PTAThread(final Socket socket, final ManagerFactory managerFactory) {
+		this.socket = socket;
+		this.managerFactory = managerFactory;
+	}
+
+	/**
+	 * 
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void run() {
+		PTAThread.LOGGER.debug("Démarrage du thread");
+		try {
+			// création du reader
+			final PTABufferedReader reader = new PTABufferedReader(
+					new InputStreamReader(socket.getInputStream()));
+
+			while (true) {
+				// Récuperation de l'input complet
+				final String input = reader.readAll();
+
+				LOGGER.info("Le client envoie : " + input);
+				final String[] splitedInput = input
+						.split(PTAConstantes.CHAR_ASCII_1.toString());
+
+				// Création du manager en charge de traiter la demande en
+				// fonction
+				// du premier bit envoyé
+				final Manager manager = managerFactory.getManager(Integer
+						.valueOf(splitedInput[NumberUtils.INTEGER_ZERO]));
+
+				// process
+				final String output = manager.process(splitedInput);
+
+				// Envoie de la réponse
+				final DataOutputStream dataOutputStream = new DataOutputStream(
+						socket.getOutputStream());
+				LOGGER.info("Envoie de la réponse " + output);
+				dataOutputStream.writeBytes(output);
+
+				dataOutputStream.flush();
+			}
+
+		} catch (final IOException e) {
+			PTAThread.LOGGER.warn("Déconnection du client");
+
+		} finally {
+			try {
+				IOUtils.closeQuietly(socket.getInputStream());
+				IOUtils.closeQuietly(socket.getOutputStream());
+				PTAThread.LOGGER.debug("Déconnection du socket");
+				socket.close();
+			} catch (final IOException e1) {
+				PTAThread.LOGGER.error(
+						"Erreur lors de la fermeture du socket ", e1);
+			}
+		}
+
+	}
+
+	/**
+	 * Retourne socket
+	 * 
+	 * @return socket
+	 */
+	public Socket getSocket() {
+		return socket;
+	}
+
+	/**
+	 * Modifie socket
+	 * 
+	 * @param socket
+	 *            socket à modifier
+	 */
+	public void setSocket(final Socket socket) {
+		this.socket = socket;
+	}
+
+}

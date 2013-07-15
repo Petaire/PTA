@@ -1,0 +1,19 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+public class PTATrackerManager extends AbstractManager {
+	
+	protected String[] input;
+	
+	/**
+	 * Constructeur
+	 * @param input
+	 * données 
+	 */
+	public PTATrackerManager(final String[] input){
+		this.input = input;
+	}
+
+}

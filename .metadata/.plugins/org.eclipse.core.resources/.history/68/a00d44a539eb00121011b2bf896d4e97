@@ -1,0 +1,65 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+import org.apache.commons.lang.math.NumberUtils;
+
+import fr.pokerfan.pta.bo.PTAConstantes;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	private Manager advisorManager;
+	private Manager dataManager;
+	private Manager importManager;
+	private Manager trackerManager;
+
+	public Manager getManager(final String input) {
+		final String[] splitedInput = input.split(PTAConstantes.CHAR_ASCII_1
+				.toString());
+		switch (Integer.valueOf(splitedInput[NumberUtils.INTEGER_ZERO])) {
+		case AbstractManager.ID_IMPORT_MANAGER:
+			return importManager;
+		default:
+
+			return null;
+		}
+	}
+
+	/**
+	 * @param advisorManager
+	 *            the advisorManager to set
+	 */
+	public void setAdvisorManager(final Manager advisorManager) {
+		this.advisorManager = advisorManager;
+	}
+
+	/**
+	 * @param dataManager
+	 *            the dataManager to set
+	 */
+	public void setDataManager(final Manager dataManager) {
+		this.dataManager = dataManager;
+	}
+
+	/**
+	 * @param importManager
+	 *            the importManager to set
+	 */
+	public void setImportManager(final Manager importManager) {
+		this.importManager = importManager;
+	}
+
+	/**
+	 * @param trackerManager
+	 *            the trackerManager to set
+	 */
+	public void setTrackerManager(final Manager trackerManager) {
+		this.trackerManager = trackerManager;
+	}
+
+}

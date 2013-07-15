@@ -1,0 +1,13 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+public class PTADataManager extends AbstractManager {
+
+	public PTADataManager(final String[] input) {
+		super(input);
+		// TODO Auto-generated constructor stub
+	}
+
+}

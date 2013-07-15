@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.server.manager;
+
+import fr.pokerfan.pta.bo.PTAConstantes;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public final class ManagerFactory {
+
+	public Manager getManager(final String input) {
+		final String[] splitedInput = input.split(PTAConstantes.CHAR_ASCII_1.toString());
+		switch (Integer.valueOf(splitedInput[0])) {
+		case 1:
+			return new PTAImportManager(splitedInput);
+		default:
+
+			return null;
+		}
+	}
+
+}

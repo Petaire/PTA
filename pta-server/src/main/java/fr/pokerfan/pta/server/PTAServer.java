@@ -8,6 +8,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import org.apache.commons.logging.impl.Log4JLogger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import fr.pokerfan.pta.server.manager.ManagerFactory;
 
 /**
  * 
@@ -20,6 +24,7 @@ public class PTAServer {
 
 	private static final Log4JLogger LOGGER = new Log4JLogger(PTAServer.class
 			.getCanonicalName());
+
 	private static final int DEFAULT_PORT = 54504;
 
 	/**
@@ -31,6 +36,12 @@ public class PTAServer {
 	 * @author pierre.kerichard
 	 */
 	public static void main(final String[] args) {
+		// Initialisation du contexte spring
+		LOGGER.info("Initialisation du contexte Spring");
+		final ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"/spring/server-beans.xml");
+		LOGGER.info("Contexte Spring initialisé");
+
 		final ServerSocket serverSocket = PTAServer.initSocket(args);
 		if (serverSocket == null) {
 			PTAServer.LOGGER.fatal("serverSocket non créé. Exit");
@@ -42,7 +53,8 @@ public class PTAServer {
 				// on attend les connections et on les sépares dans des threads
 				// différents
 				final Socket socketConnection = serverSocket.accept();// bloquant
-				final PTAThread ptaThread = new PTAThread(socketConnection);
+				final PTAThread ptaThread = new PTAThread(socketConnection,
+						applicationContext.getBean(ManagerFactory.class));
 				final Thread thread = new Thread(ptaThread);
 				thread.start();
 			} catch (final IOException e) {

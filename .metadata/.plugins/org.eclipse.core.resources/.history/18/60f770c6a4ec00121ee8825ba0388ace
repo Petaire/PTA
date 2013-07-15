@@ -1,0 +1,26 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.services.impl;
+
+import com.sampullara.poker.Card;
+import com.sampullara.poker.Cards;
+import com.sampullara.poker.Evaluate;
+import com.sampullara.poker.HandRank;
+import com.sampullara.poker.Card.Rank;
+import com.sampullara.poker.Card.Suit;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class TestEval {
+
+	public static void main(final String[] args) {
+		final Cards cards = new Cards();
+		cards.add(new Card(Rank.ACE, Suit.CLUBS));
+		cards.add(new Card(Rank.KING, Suit.CLUBS));
+		final HandRank rank = Evaluate.holdem(cards, new Cards());
+		System.out.println(rank);
+	}
+}

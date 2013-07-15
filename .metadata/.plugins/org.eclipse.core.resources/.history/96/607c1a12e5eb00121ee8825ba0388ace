@@ -1,0 +1,11 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.server.manager;
+
+import org.springframework.stereotype.Component;
+
+@Component("dataManager")
+public class PTADataManager extends AbstractManager {
+
+}

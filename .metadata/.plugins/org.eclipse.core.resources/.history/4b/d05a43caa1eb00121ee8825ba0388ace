@@ -1,0 +1,30 @@
+/*
+ * Document confidentiel - Diffusion interdite 
+ */
+package fr.pokerfan.pta.server;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.net.Socket;
+
+/**
+ * @author pierre.kerichard
+ * 
+ */
+public class PTAClientTest {
+	public static void main(final String argv[]) throws Exception {
+
+		final Socket clientSocket = new Socket("127.0.0.1", 54504);
+		final DataOutputStream outToServer = new DataOutputStream(clientSocket
+				.getOutputStream());
+		final FileInputStream file = new FileInputStream("./input.txt");
+		DataInputStream data = new DataInputStream(file);
+		outToServer
+				.writeBytes(data
+		outToServer.close();
+		clientSocket.close();
+
+	}
+}

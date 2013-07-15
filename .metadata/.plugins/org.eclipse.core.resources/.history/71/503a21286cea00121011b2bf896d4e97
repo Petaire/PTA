@@ -1,0 +1,44 @@
+/*
+ * Document confidentiel - Diffusion interdite 
+ */
+package fr.pokerfan.pta.bo.turnament;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+
+import fr.pokerfan.pta.bo.player.Player;
+
+
+/**
+ * 
+ * Tournoi/SitNGo
+ * 
+ */
+public class Turnament extends Observable{
+
+	private final List<Player> players=new ArrayList<Player>();
+
+	public Turnament() {
+
+	}
+
+	public void addPlayers(final List<Player> players){
+		this.players.addAll(players);
+	}
+
+	public void addPlayer(final Player player){
+		players.add(player);
+	}
+
+	public void removePlayer(final Player player){
+		players.remove(player);	
+	}
+
+	public void clearPlayers(){
+		players.clear();
+	}
+
+
+
+}

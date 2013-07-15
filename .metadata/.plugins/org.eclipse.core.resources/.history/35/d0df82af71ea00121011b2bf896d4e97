@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package fr.pokerfan.pta.utils;
+
+/**
+ * @author pierre.kerichard
+ *
+ */
+public final class PTAUtils {
+
+}

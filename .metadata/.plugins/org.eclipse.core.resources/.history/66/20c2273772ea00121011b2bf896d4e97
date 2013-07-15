@@ -1,0 +1,117 @@
+/**
+ * Document confidentiel. Difusion interdite
+ */
+package fr.pokerfan.pta.bo.player;
+
+import java.math.BigDecimal;
+import java.util.Observable;
+import java.util.Observer;
+
+import fr.pokerfan.pta.bo.enums.Room;
+import fr.pokerfan.pta.bo.turnament.Turnament;
+
+
+/**
+ * Représentation d'un joueur
+ * 
+ * @author pierre.kerichard
+ * 
+ */
+public class Player implements Observer{
+	
+	/**
+	 * id technique
+	 */
+	private Long id;
+
+	/**
+	 * nom du joueur
+	 */
+	private String name;
+	
+	/**
+	 * room
+	 */
+	private Room room;
+	
+	/**
+	 * tapis
+	 */
+	private BigDecimal stack;
+	
+	
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	/**
+	 * @return the room
+	 */
+	public Room getRoom() {
+		return room;
+	}
+
+
+	/**
+	 * @param room the room to set
+	 */
+	public void setRoom(Room room) {
+		this.room = room;
+	}
+
+
+	/**
+	 * @return the stack
+	 */
+	public BigDecimal getStack() {
+		return stack;
+	}
+
+
+	/**
+	 * @param stack the stack to set
+	 */
+	public void setStack(BigDecimal stack) {
+		this.stack = stack;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void update(Observable subject, Object params) {
+		if(subject instanceof Turnament){
+			//mise à jour des blinds
+		}
+		
+	}
+	
+}
